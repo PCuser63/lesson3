@@ -25,6 +25,13 @@ class Human:
         else:
             self.make_deal(home,final_price)
 
+class House:
+    def __init__(self, area, price):
+        self.area = area
+        self.price = price
+    def final_price(self,discount):
+        print("Конечная цена, учитывая скидку: ",self.price - discount)
+
 
 jack = Human("Jack",45,100,False)
 #jack.info()
