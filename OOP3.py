@@ -18,8 +18,12 @@ class Human:
         print(f"Остаток средств: {self.__money}")
     def earn_money(self,add_money):
         self.__money += add_money
-    #def buy_house(self,home,discount):
-
+    def buy_house(self,home,discount):
+        final_price = home.price - discount
+        if self.__money < final_price:
+            print("Денег недостаточно для покупки дома")
+        else:
+            self.make_deal(home,final_price)
 
 
 jack = Human("Jack",45,100,False)
