@@ -9,7 +9,7 @@ class Human:
         self.__money = money
         self.__home = home
     def info(self):
-        print(f" Имя: {self.name} \n Возраст: {self.age} \n Капитал: {self.__money} \n Дом: {self.__home}")
+        print(f"\n Имя: {self.name} \n Возраст: {self.age} \n Капитал: {self.__money} \n Дом: {self.__home}")
     def default_info():
         print(f" Имя: {Human.default_name} \n Возраст: {Human.default_age} \n Капитал: {Human.default_money} \n Дом: {Human.deault_home}")
     def make_deal(self,home,price):
@@ -42,7 +42,7 @@ class SmallHouse(House):
 
 
 default = Human.default_info()
-jack = Human("Jack",45,100,False)
+jack = Human("JACK",45,100,False)
 jack.info()
 h = SmallHouse(400)
 jack.buy_house(h,1)
