@@ -32,7 +32,19 @@ class House:
     def final_price(self,discount):
         print("Конечная цена, учитывая скидку: ",self.price - discount)
 
+class SmallHouse(House):
+    area = 40
+    def __init__(self,price):
+        self.price = price
+        self.area = SmallHouse.area
 
-jack = Human("Jack",45,100,False)
-#jack.info()
+    
+
+
 default = Human.default_info()
+jack = Human("Jack",45,100,False)
+jack.info()
+h = SmallHouse(400)
+jack.buy_house(h,1)
+jack.earn_money(100000)
+jack.buy_house(h,1)
